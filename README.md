@@ -11,7 +11,7 @@
 | 项 | 状态 | 人力当量 |
 |---|---|---|
 | 事件数据模型（8 个字段 + 来源 + 验证日期） | ✅ 已完成 | 0.5 h |
-| 采集器（HN 公开 API，7 组关键词，240 天窗口） | ✅ 已完成 | 1.5 h |
+| 采集器（HN 公开 API + Google Search Status 官方 JSON） | ✅ 已完成 | 2 h |
 | 静态生成器（首页 + 8 个事件页 + JSON-LD + feed + sitemap + llms.txt + robots.txt） | ✅ 已完成 | 1.5 h |
 | 8 条种子事件（逐条核对来源后手写） | ✅ 已完成 | 1 h |
 | **本次合计** | | **≈ 4.5 h** |
@@ -41,6 +41,16 @@ labs/ai-changes/
 无框架、无依赖、无构建缓存。Node 20+ 直接跑。
 
 ---
+
+## 二·五、事件字段
+
+| 字段 | 作用 |
+|---|---|
+| `audience[]` | 谁受影响，封闭词表：`site_owners` / `marketers` / `developers` / `founders` / `teams`。这是和"新闻站"的核心区别，首页可按它筛选 |
+| `affects` | 一句话"具体打到谁身上"，替代摘要出现在卡片里 |
+| `watch[]` | 这周该查什么（GSC 指标、账单、日志），把"新闻"变成"动作" |
+| `status` | `confirmed`（厂商文档/官方状态页）或 `reported`（仅媒体报道） |
+| `verifiedAt` | 最后核对日期，渲染在页面顶部和 JSON-LD 的 `dateModified` |
 
 ## 三、怎么用
 

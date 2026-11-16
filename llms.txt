@@ -19,4 +19,5 @@ Last updated: 2026-11-16. Entries are re-checked against vendor documentation; t
 
 ## Machine-readable
 - [JSON feed](https://changes.aigeolens.com/feed.json)
+- [Policy and pricing timeline](https://changes.aigeolens.com/timeline/)
 - [Sitemap](https://changes.aigeolens.com/sitemap.xml)

@@ -1,0 +1,233 @@
+<!doctype html>
+<html lang="en"><head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Policy and pricing timeline — AI vendors, newest first | AI Change Log</title>
+<meta name="description" content="A dated timeline of policy, pricing, limit, deprecation and ranking changes from Google, OpenAI, Anthropic, Microsoft and Mozilla.">
+<link rel="canonical" href="https://changes.aigeolens.com/timeline/">
+
+<style>
+:root{--ink:#12141a;--muted:#5d6470;--line:#e3e5ea;--bg:#fbfbfc;--accent:#1a4bd8;--warn:#b45309;--ok:#0f7b4f}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.6 ui-sans-serif,system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+a{color:var(--accent);text-decoration:none}a:hover{text-decoration:underline}
+.wrap{max-width:760px;margin:0 auto;padding:28px 20px 80px}
+header.top{display:flex;justify-content:space-between;align-items:baseline;gap:12px;padding-bottom:16px;border-bottom:1px solid var(--line)}
+.brand{font-weight:700;letter-spacing:-.02em;font-size:18px;color:var(--ink)}
+.meta{color:var(--muted);font-size:13px}
+h1{font-size:30px;line-height:1.2;letter-spacing:-.03em;margin:28px 0 10px}
+.lede{color:var(--muted);margin:0 0 22px;font-size:15px}
+.stats{display:flex;gap:22px;flex-wrap:wrap;padding:14px 16px;background:#fff;border:1px solid var(--line);border-radius:10px;margin-bottom:22px}
+.stat b{display:block;font-size:19px;line-height:1.2}
+.stat span{color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:.06em}
+.filters{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:18px}
+.filters button{font:inherit;font-size:13px;padding:5px 11px;border-radius:99px;border:1px solid var(--line);background:#fff;color:var(--muted);cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:#fff;border-color:var(--ink)}
+ol.feed{list-style:none;margin:0;padding:0}
+ol.feed li{padding:16px 0;border-bottom:1px solid var(--line)}
+.row{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--muted);margin-bottom:4px;flex-wrap:wrap}
+.badge{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:4px;background:#eef1f7;color:#334}
+.badge.algorithm_update{background:#fff1e6;color:#8a3b00}
+.badge.spam_update{background:#fdeef4;color:#8d1f4d}
+.badge.shutdown{background:#fdecec;color:#a11}
+.badge.price_change{background:#fff4e5;color:#8a4b00}
+.badge.limit_change{background:#e9f1ff;color:#14418f}
+.badge.deprecation{background:#f2ecff;color:#522a9b}
+.badge.policy_change{background:#e9f6ef;color:#0c5c3c}
+.status{font-size:11px;text-transform:uppercase;letter-spacing:.05em}
+.status.confirmed{color:var(--ok)}.status.reported{color:var(--warn)}
+ol.feed h2{font-size:17px;line-height:1.35;margin:0 0 4px;letter-spacing:-.01em;font-weight:600}
+ol.feed h2 a{color:var(--ink)}
+.snip{color:var(--muted);font-size:14px;margin:0}
+.who{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#2b3a55;background:#eef2f8;border:1px solid #dde4f0;border-radius:99px;padding:2px 9px;margin:7px 0 0}
+.filters.aud{margin-top:-8px}
+.filters span.lbl{flex-basis:100%;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px}
+article h1{margin-top:24px}
+.answer{background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px;margin:18px 0;font-size:15px}
+.facts{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:#fff}
+.facts th,.facts td{border:1px solid var(--line);padding:8px 10px;text-align:left;vertical-align:top}
+.facts th{width:34%;color:var(--muted);font-weight:500}
+h3{font-size:15px;text-transform:uppercase;letter-spacing:.06em;color:var(--muted);margin:26px 0 8px}
+ul.actions{padding-left:18px}
+ul.actions li{margin:6px 0}
+.src{font-size:13px;color:var(--muted)}
+footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-size:13px;color:var(--muted)}
+.tl{list-style:none;margin:0;padding:0 0 0 18px;border-left:1px solid var(--line)}
+.tl li.year{list-style:none;margin:24px 0 6px -18px;padding-left:14px}
+.tl li.year h2{font-size:19px;margin:0;letter-spacing:-.02em}
+.tl-item{position:relative;padding:12px 0 14px;border-bottom:1px solid var(--line)}
+.tl-dot{position:absolute;left:-22px;top:19px;width:7px;height:7px;border-radius:50%}
+.vname{font-weight:700;font-size:12px}
+.tl h3.tl-title{font-size:16px;line-height:1.35;margin:5px 0 4px;text-transform:none;letter-spacing:-.01em;color:var(--ink)}
+.tl h3.tl-title a{color:var(--ink)}
+.subscribe{background:#fff;border:1px solid var(--line);border-radius:10px;padding:16px 18px;margin:26px 0 0;font-size:14px}
+.subscribe p{margin:4px 0 0;color:var(--muted);font-size:13px}
+.cta{display:inline-block;margin-top:10px;background:var(--ink);color:#fff;padding:8px 14px;border-radius:7px;font-size:14px}
+.cta:hover{text-decoration:none;opacity:.9}
+@media(max-width:520px){h1{font-size:24px}.wrap{padding:20px 16px 60px}}
+</style>
+</head><body><div class="wrap">
+<header class="top"><a class="brand" href="/">AI Change Log</a>
+<span class="meta"><a href="/timeline/">Policy timeline</a> &middot; last verified 16 Nov 2026</span></header>
+<main>
+<h1>Policy and pricing timeline</h1>
+<p class="lede">Every rule change we have verified, newest first: terms, pricing, usage limits, deprecations and ranking updates, across the vendors that decide how your stack behaves.</p>
+<div class="filters"><span class="lbl">Vendor</span><button data-kind="vendor" data-value="all" aria-pressed="true">All vendors</button><button data-kind="vendor" data-value="OpenAI" aria-pressed="false">OpenAI</button><button data-kind="vendor" data-value="Google" aria-pressed="false">Google</button><button data-kind="vendor" data-value="Mozilla" aria-pressed="false">Mozilla</button><button data-kind="vendor" data-value="Microsoft" aria-pressed="false">Microsoft</button><button data-kind="vendor" data-value="Anthropic" aria-pressed="false">Anthropic</button></div>
+<ol class="tl">
+<li class="year"><h2>2026</h2></li><li class="tl-item" data-vendor="OpenAI">
+    <span class="tl-dot" style="background:#0f7b4f"></span>
+    <div class="row"><span class="vname" style="color:#0f7b4f">OpenAI</span>
+      <time datetime="2026-11-12">12 Nov 2026</time>
+      <span class="badge">Limit change</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="/change/codex-banked-reset-nov-12-2026.html">A banked Codex reset was activated for all paid users on November 12, 2026</a></h3>
+    <p class="snip">Paid Codex users and ChatGPT Work users. Team and Business workspaces have separate behaviour.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-11-10">10 Nov 2026</time>
+      <span class="badge">Ranking update</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="/change/google-november-2026-core-update.html">Google's November 2026 core update is rolling out — global, all languages, up to two weeks</a></h3>
+    <p class="snip">Every site with organic Google traffic. The ones most exposed are sites that rank on informational queries where AI answers now compete for the click.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-10-30">30 Oct 2026</time>
+      <span class="badge">Shutdown</span>
+      <span class="status reported">reported</span></div>
+    <h3 class="tl-title"><a href="/change/google-custom-search-api-shutdown.html">Google Custom Search JSON API is being shut down — migration options for site search and RAG</a></h3>
+    <p class="snip">Products and agents that call the Custom Search JSON API directly, and anything built on a CSE ID.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-10-30">30 Oct 2026</time>
+      <span class="badge">terms</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="https://developers.google.com/search/blog/2026/10/ai-training-control" rel="nofollow noopener">Google Search added a shared AI training control for websites</a></h3>
+    <p class="snip">A single control sites can use to express how their content may be used for AI training and grounding, instead of relying on separate crawler tokens and robots rules. It is the first time Google has offered one switch that covers several AI uses at once.</p>
+  </li>
+<li class="tl-item" data-vendor="OpenAI">
+    <span class="tl-dot" style="background:#0f7b4f"></span>
+    <div class="row"><span class="vname" style="color:#0f7b4f">OpenAI</span>
+      <time datetime="2026-10-29">29 Oct 2026</time>
+      <span class="badge">Limit change</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="/change/codex-pro-limits-doubled-oct-2026.html">OpenAI doubled Codex and Work usage limits on Pro 100 and Pro 500, and cancelled the Pro 200 cut</a></h3>
+    <p class="snip">Codex and ChatGPT Work users on Pro 100 / Pro 200 / Pro 500 and Business Premium. Your effective budget per seat just changed.</p>
+  </li>
+<li class="tl-item" data-vendor="Mozilla">
+    <span class="tl-dot" style="background:#a11"></span>
+    <div class="row"><span class="vname" style="color:#a11">Mozilla</span>
+      <time datetime="2026-10-01">1 Oct 2026</time>
+      <span class="badge">Shutdown</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="/change/solo-ai-website-builder-shutdown.html">Solo (Mozilla's AI website builder) is shutting down — sites deleted November 30, 2026</a></h3>
+    <p class="snip">Anyone whose site, domain or form data lives on Solo. The export deadline is the whole story — after November 30 there is nothing to recover.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-09-24">24 Sept 2026</time>
+      <span class="badge">Spam update</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="/change/google-september-2026-spam-update.html">Google's September 2026 spam update finished rolling out on October 8</a></h3>
+    <p class="snip">Sites using scaled content, expired-domain abuse, site reputation abuse (paid posts on an otherwise unrelated section), cloaking, or thin affiliate pages.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-08-18">18 Aug 2026</time>
+      <span class="badge">Spam update</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="/change/google-august-2026-spam-update.html">Google's August 2026 spam update ran for three days and completed August 21</a></h3>
+    <p class="snip">Sites that added scaled or sponsored content in the months before August 2026.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-08">Aug 2026</time>
+      <span class="badge">policy</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="https://developers.google.com/search/blog/2026/08/update-site-reputation-policy" rel="nofollow noopener">Google updated its site reputation policy</a></h3>
+    <p class="snip">A revision to the rules on publishing third-party content on an otherwise unrelated site — the 'site reputation abuse' category that hit coupon sections, sponsored subfolders and education pages. Sites in those arrangements had to change how the content was labelled or where it lived.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-07-21">21 Jul 2026</time>
+      <span class="badge">Deprecation</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="/change/gemini-temperature-top-p-top-k-deprecated.html">Gemini's latest models ignore temperature, top_p and top_k</a></h3>
+    <p class="snip">Teams calling Gemini's newest models through the API and tuning sampling parameters. Nothing throws — the knobs just stop working.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-07-10">10 Jul 2026</time>
+      <span class="badge">Deprecation</span>
+      <span class="status reported">reported</span></div>
+    <h3 class="tl-title"><a href="/change/gemini-2-5-flash-discontinuation-pressure.html">Developers are pushing back on plans to discontinue Gemini 2.5 Flash</a></h3>
+    <p class="snip">Teams running high-volume, low-cost workloads on Gemini 2.5 Flash.</p>
+  </li>
+<li class="tl-item" data-vendor="Microsoft">
+    <span class="tl-dot" style="background:#522a9b"></span>
+    <div class="row"><span class="vname" style="color:#522a9b">Microsoft</span>
+      <time datetime="2026-05-22">22 May 2026</time>
+      <span class="badge">Policy change</span>
+      <span class="status reported">reported</span></div>
+    <h3 class="tl-title"><a href="/change/microsoft-cancels-claude-code-licenses.html">Microsoft began cancelling internal Claude Code licenses</a></h3>
+    <p class="snip">Large orgs choosing an agent tool. Nothing in Claude Code itself changed — this is a procurement signal.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-04">Apr 2026</time>
+      <span class="badge">policy</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="https://developers.google.com/search/blog/2026/04/back-button-hijacking" rel="nofollow noopener">Google added a spam policy for back-button hijacking</a></h3>
+    <p class="snip">A new spam policy covering pages that hijack the browser back button — redirecting users somewhere they did not navigate to. It sits under the spam policies rather than ranking quality, so the fix is removal, not rewriting.</p>
+  </li>
+<li class="tl-item" data-vendor="OpenAI">
+    <span class="tl-dot" style="background:#0f7b4f"></span>
+    <div class="row"><span class="vname" style="color:#0f7b4f">OpenAI</span>
+      <time datetime="2026-03-24">24 Mar 2026</time>
+      <span class="badge">Shutdown</span>
+      <span class="status reported">reported</span></div>
+    <h3 class="tl-title"><a href="/change/sora-discontinued-2026.html">OpenAI moved to discontinue Sora, its AI video product</a></h3>
+    <p class="snip">Teams that built video pipelines on Sora, and anyone holding Sora credits.</p>
+  </li>
+<li class="tl-item" data-vendor="Google">
+    <span class="tl-dot" style="background:#1a4bd8"></span>
+    <div class="row"><span class="vname" style="color:#1a4bd8">Google</span>
+      <time datetime="2026-02">Feb 2026</time>
+      <span class="badge">algorithm</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="https://developers.google.com/search/blog/2026/02/discover-core-update" rel="nofollow noopener">Google ran a February 2026 Discover core update</a></h3>
+    <p class="snip">A core update scoped to Discover rather than Search. Sites that rely on Discover for traffic were exposed even if their web rankings never moved, which is why Discover and Search have to be read as separate surfaces.</p>
+  </li>
+<li class="year"><h2>2025</h2></li><li class="tl-item" data-vendor="Anthropic">
+    <span class="tl-dot" style="background:#8a4b00"></span>
+    <div class="row"><span class="vname" style="color:#8a4b00">Anthropic</span>
+      <time datetime="2025-08-28">28 Aug 2025</time>
+      <span class="badge">terms</span>
+      <span class="status confirmed">confirmed</span></div>
+    <h3 class="tl-title"><a href="https://www.anthropic.com/news/updates-to-our-consumer-terms" rel="nofollow noopener">Anthropic updated its consumer terms to train on chat data, with an opt-out</a></h3>
+    <p class="snip">Claude consumers were moved onto new terms that allow chat and coding sessions to be used for model training, with an opt-out setting. Anyone on a paid consumer plan had a deadline to object before the change applied to their history.</p>
+  </li>
+</ol>
+<script>
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  document.querySelectorAll('.filters button').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  const v=b.dataset.value;
+  document.querySelectorAll('ol.tl li.tl-item').forEach(li=>{
+    li.style.display=(v==='all'||li.dataset.vendor===v)?'':'none';
+  });
+  document.querySelectorAll('ol.tl li.year').forEach(y=>{ y.style.display=''; });
+}));
+</script>
+</main>
+<footer>Independent tracker. Not affiliated with any vendor. Every entry links to its source and shows the date it was last checked.</footer>
+</div></body></html>
