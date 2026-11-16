@@ -111,3 +111,24 @@ open dist/index.html
 - `reported` 的条目还没有回归确认机制（90 天后应自动标记为"待复核"）。
 - 没有订阅后端。`SUBSCRIBE_URL` 得你自己接一个。
 - 变现路径未接：停运工具的替代品可以做联盟，但需要先有流量。
+
+---
+
+## 八、部署（已上线）
+
+- 站点：https://changes.aigeolens.com/
+- 仓库：https://github.com/Mireia9868/ai-changes （`main` 分支根目录即站点，GitHub Pages）
+- 域名：`changes.aigeolens.com` → Cloudflare CNAME → `mireia9868.github.io`（DNS only）
+- 为什么是子域：`aigeolens.com` 根域名是一个在跑的日文产品站，不能覆盖。
+
+一条命令更新线上：
+
+```bash
+NODE=/path/to/node ./scripts/deploy-gh.sh
+# 可选：SITE_URL=... SITE_REPO=/tmp/ai-changes-deploy COMMIT_MSG="..." ./scripts/deploy-gh.sh
+```
+
+脚本做四件事：按 SITE_URL 重建 → 同步到仓库克隆（保留 CNAME / .nojekyll / IndexNow 密钥文件）→ 提交推送 → 抓 sitemap 向 IndexNow 提交全部 URL。
+
+只做一次的手动设置（已完成）：GitHub Settings → Pages（source: main / root）；Cloudflare DNS 加 CNAME。
+仍需手动：Settings → Pages → **Enforce HTTPS**（目前 http 仍返回 200）。

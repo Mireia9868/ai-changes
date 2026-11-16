@@ -4,7 +4,7 @@
 <title>AI Change Log — AI tool shutdowns, price changes and deprecations</title>
 <meta name="description" content="A dated log of AI tools that shut down, changed price, changed usage limits or deprecated a model, with what to do about each one.">
 <link rel="canonical" href="https://changes.aigeolens.com/">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"AI Change Log","itemListElement":[{"@type":"ListItem","position":1,"name":"A banked Codex reset was activated for all paid users on November 12, 2026","url":"https://changes.aigeolens.com/change/codex-banked-reset-nov-12-2026.html"},{"@type":"ListItem","position":2,"name":"Google Custom Search JSON API is being shut down — migration options for site search and RAG","url":"https://changes.aigeolens.com/change/google-custom-search-api-shutdown.html"},{"@type":"ListItem","position":3,"name":"OpenAI doubled Codex and Work usage limits on Pro 100 and Pro 500, and cancelled the Pro 200 cut","url":"https://changes.aigeolens.com/change/codex-pro-limits-doubled-oct-2026.html"},{"@type":"ListItem","position":4,"name":"Solo (Mozilla's AI website builder) is shutting down — sites deleted November 30, 2026","url":"https://changes.aigeolens.com/change/solo-ai-website-builder-shutdown.html"},{"@type":"ListItem","position":5,"name":"Gemini's latest models ignore temperature, top_p and top_k","url":"https://changes.aigeolens.com/change/gemini-temperature-top-p-top-k-deprecated.html"},{"@type":"ListItem","position":6,"name":"Developers are pushing back on plans to discontinue Gemini 2.5 Flash","url":"https://changes.aigeolens.com/change/gemini-2-5-flash-discontinuation-pressure.html"},{"@type":"ListItem","position":7,"name":"Microsoft began cancelling internal Claude Code licenses","url":"https://changes.aigeolens.com/change/microsoft-cancels-claude-code-licenses.html"},{"@type":"ListItem","position":8,"name":"OpenAI moved to discontinue Sora, its AI video product","url":"https://changes.aigeolens.com/change/sora-discontinued-2026.html"}]}</script>
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ItemList","name":"AI Change Log","itemListElement":[{"@type":"ListItem","position":1,"name":"A banked Codex reset was activated for all paid users on November 12, 2026","url":"https://changes.aigeolens.com/change/codex-banked-reset-nov-12-2026.html"},{"@type":"ListItem","position":2,"name":"Google's November 2026 core update is rolling out — global, all languages, up to two weeks","url":"https://changes.aigeolens.com/change/google-november-2026-core-update.html"},{"@type":"ListItem","position":3,"name":"Google Custom Search JSON API is being shut down — migration options for site search and RAG","url":"https://changes.aigeolens.com/change/google-custom-search-api-shutdown.html"},{"@type":"ListItem","position":4,"name":"OpenAI doubled Codex and Work usage limits on Pro 100 and Pro 500, and cancelled the Pro 200 cut","url":"https://changes.aigeolens.com/change/codex-pro-limits-doubled-oct-2026.html"},{"@type":"ListItem","position":5,"name":"Solo (Mozilla's AI website builder) is shutting down — sites deleted November 30, 2026","url":"https://changes.aigeolens.com/change/solo-ai-website-builder-shutdown.html"},{"@type":"ListItem","position":6,"name":"Google's September 2026 spam update finished rolling out on October 8","url":"https://changes.aigeolens.com/change/google-september-2026-spam-update.html"},{"@type":"ListItem","position":7,"name":"Google's August 2026 spam update ran for three days and completed August 21","url":"https://changes.aigeolens.com/change/google-august-2026-spam-update.html"},{"@type":"ListItem","position":8,"name":"Gemini's latest models ignore temperature, top_p and top_k","url":"https://changes.aigeolens.com/change/gemini-temperature-top-p-top-k-deprecated.html"},{"@type":"ListItem","position":9,"name":"Developers are pushing back on plans to discontinue Gemini 2.5 Flash","url":"https://changes.aigeolens.com/change/gemini-2-5-flash-discontinuation-pressure.html"},{"@type":"ListItem","position":10,"name":"Microsoft began cancelling internal Claude Code licenses","url":"https://changes.aigeolens.com/change/microsoft-cancels-claude-code-licenses.html"},{"@type":"ListItem","position":11,"name":"OpenAI moved to discontinue Sora, its AI video product","url":"https://changes.aigeolens.com/change/sora-discontinued-2026.html"}]}</script>
 <style>
 :root{--ink:#12141a;--muted:#5d6470;--line:#e3e5ea;--bg:#fbfbfc;--accent:#1a4bd8;--warn:#b45309;--ok:#0f7b4f}
 *{box-sizing:border-box}
@@ -26,6 +26,8 @@ ol.feed{list-style:none;margin:0;padding:0}
 ol.feed li{padding:16px 0;border-bottom:1px solid var(--line)}
 .row{display:flex;gap:10px;align-items:center;font-size:12px;color:var(--muted);margin-bottom:4px;flex-wrap:wrap}
 .badge{font-size:11px;font-weight:600;letter-spacing:.04em;text-transform:uppercase;padding:2px 7px;border-radius:4px;background:#eef1f7;color:#334}
+.badge.algorithm_update{background:#fff1e6;color:#8a3b00}
+.badge.spam_update{background:#fdeef4;color:#8d1f4d}
 .badge.shutdown{background:#fdecec;color:#a11}
 .badge.price_change{background:#fff4e5;color:#8a4b00}
 .badge.limit_change{background:#e9f1ff;color:#14418f}
@@ -36,6 +38,9 @@ ol.feed li{padding:16px 0;border-bottom:1px solid var(--line)}
 ol.feed h2{font-size:17px;line-height:1.35;margin:0 0 4px;letter-spacing:-.01em;font-weight:600}
 ol.feed h2 a{color:var(--ink)}
 .snip{color:var(--muted);font-size:14px;margin:0}
+.who{display:inline-block;font-size:11.5px;font-weight:600;letter-spacing:.02em;color:#2b3a55;background:#eef2f8;border:1px solid #dde4f0;border-radius:99px;padding:2px 9px;margin:7px 0 0}
+.filters.aud{margin-top:-8px}
+.filters span.lbl{flex-basis:100%;font-size:11px;text-transform:uppercase;letter-spacing:.07em;color:var(--muted);margin-bottom:4px}
 article h1{margin-top:24px}
 .answer{background:#fff;border:1px solid var(--line);border-left:3px solid var(--accent);border-radius:8px;padding:14px 16px;margin:18px 0;font-size:15px}
 .facts{width:100%;border-collapse:collapse;margin:18px 0;font-size:14px;background:#fff}
@@ -56,80 +61,118 @@ footer{margin-top:40px;padding-top:16px;border-top:1px solid var(--line);font-si
 <header class="top"><a class="brand" href="/">AI Change Log</a>
 <span class="meta">Last verified 16 Nov 2026</span></header>
 <main>
-<h1>What changed in AI tools, and what to do about it</h1>
-<p class="lede">A dated log of AI products that shut down, changed price, changed limits or deprecated a model — with the migration step for each one. No "top 50 tools" list.</p>
+<h1>What changed, who it hits, and what to check this week</h1>
+<p class="lede">A dated log of AI and search changes — shutdowns, price and limit changes, deprecations, and Google ranking updates. Every entry names who is affected and gives the check to run, not just the news.</p>
 <div class="stats">
-  <div class="stat"><b>8</b><span>changes logged</span></div>
-  <div class="stat"><b>81</b><span>raw signals, unreviewed</span></div>
+  <div class="stat"><b>11</b><span>changes logged</span></div>
+  <div class="stat"><b>95</b><span>raw signals, unreviewed</span></div>
   <div class="stat"><b>12 Nov 2026</b><span>most recent</span></div>
 </div>
-<div class="filters"><button data-type="all" aria-pressed="true">All</button><button data-type="shutdown" aria-pressed="false">Shutdown 3</button><button data-type="limit_change" aria-pressed="false">Limit change 2</button><button data-type="deprecation" aria-pressed="false">Deprecation 2</button><button data-type="policy_change" aria-pressed="false">Policy change 1</button></div>
+<div class="filters"><span class="lbl">What changed</span><button data-kind="type" data-value="all" aria-pressed="true">All</button><button data-kind="type" data-value="algorithm_update" aria-pressed="false">Ranking update 1</button><button data-kind="type" data-value="spam_update" aria-pressed="false">Spam update 2</button><button data-kind="type" data-value="shutdown" aria-pressed="false">Shutdown 3</button><button data-kind="type" data-value="limit_change" aria-pressed="false">Limit change 2</button><button data-kind="type" data-value="deprecation" aria-pressed="false">Deprecation 2</button><button data-kind="type" data-value="policy_change" aria-pressed="false">Policy change 1</button></div>
+<div class="filters aud"><span class="lbl">Who it hits</span><button data-kind="aud" data-value="all" aria-pressed="true">Anyone</button><button data-kind="aud" data-value="site_owners" aria-pressed="false">Site owners 4</button><button data-kind="aud" data-value="marketers" aria-pressed="false">Marketers 4</button><button data-kind="aud" data-value="developers" aria-pressed="false">Developers 5</button><button data-kind="aud" data-value="founders" aria-pressed="false">Founders 2</button><button data-kind="aud" data-value="teams" aria-pressed="false">Teams & IT 3</button></div>
 <ol class="feed">
-  <li data-type="limit_change">
+  <li data-type="limit_change" data-aud="developers">
     <div class="row"><span class="badge limit_change">Limit change</span>
       <time datetime="2026-11-12">12 Nov 2026</time>
       <span class="status confirmed">confirmed</span></div>
     <h2><a href="/change/codex-banked-reset-nov-12-2026.html">A banked Codex reset was activated for all paid users on November 12, 2026</a></h2>
-    <p class="snip">OpenAI activated a banked reset for Codex at 21:59 UTC on November 12, 2026, applying to paid Codex and ChatGPT Work users.</p>
+    <span class="who">For Developers</span>
+    <p class="snip">Paid Codex users and ChatGPT Work users. Team and Business workspaces have separate behaviour.</p>
   </li>
-  <li data-type="shutdown">
+  <li data-type="algorithm_update" data-aud="site_owners marketers">
+    <div class="row"><span class="badge algorithm_update">Ranking update</span>
+      <time datetime="2026-11-10">10 Nov 2026</time>
+      <span class="status confirmed">confirmed</span></div>
+    <h2><a href="/change/google-november-2026-core-update.html">Google's November 2026 core update is rolling out — global, all languages, up to two weeks</a></h2>
+    <span class="who">For Site owners · Marketers</span>
+    <p class="snip">Every site with organic Google traffic. The ones most exposed are sites that rank on informational queries where AI answers now compete for the click.</p>
+  </li>
+  <li data-type="shutdown" data-aud="developers">
     <div class="row"><span class="badge shutdown">Shutdown</span>
       <time datetime="2026-10-30">30 Oct 2026</time>
       <span class="status reported">reported</span></div>
     <h2><a href="/change/google-custom-search-api-shutdown.html">Google Custom Search JSON API is being shut down — migration options for site search and RAG</a></h2>
-    <p class="snip">Reports on October 30, 2026 say Google is retiring the Custom Search JSON API, the endpoint many products used for cheap programmatic web search.</p>
+    <span class="who">For Developers</span>
+    <p class="snip">Products and agents that call the Custom Search JSON API directly, and anything built on a CSE ID.</p>
   </li>
-  <li data-type="limit_change">
+  <li data-type="limit_change" data-aud="developers teams">
     <div class="row"><span class="badge limit_change">Limit change</span>
       <time datetime="2026-10-29">29 Oct 2026</time>
       <span class="status confirmed">confirmed</span></div>
     <h2><a href="/change/codex-pro-limits-doubled-oct-2026.html">OpenAI doubled Codex and Work usage limits on Pro 100 and Pro 500, and cancelled the Pro 200 cut</a></h2>
-    <p class="snip">On October 29, 2026 OpenAI doubled all usage limits for Pro 100, Pro 200 and Pro 500 tiers plus Business Premium for Codex and ChatGPT Work.</p>
+    <span class="who">For Developers · Teams &amp; IT</span>
+    <p class="snip">Codex and ChatGPT Work users on Pro 100 / Pro 200 / Pro 500 and Business Premium. Your effective budget per seat just changed.</p>
   </li>
-  <li data-type="shutdown">
+  <li data-type="shutdown" data-aud="site_owners founders">
     <div class="row"><span class="badge shutdown">Shutdown</span>
       <time datetime="2026-10-01">1 Oct 2026</time>
       <span class="status confirmed">confirmed</span></div>
     <h2><a href="/change/solo-ai-website-builder-shutdown.html">Solo (Mozilla's AI website builder) is shutting down — sites deleted November 30, 2026</a></h2>
-    <p class="snip">Mozilla announced on October 1, 2026 that Solo is closing.</p>
+    <span class="who">For Site owners · Founders</span>
+    <p class="snip">Anyone whose site, domain or form data lives on Solo. The export deadline is the whole story — after November 30 there is nothing to recover.</p>
   </li>
-  <li data-type="deprecation">
+  <li data-type="spam_update" data-aud="site_owners marketers">
+    <div class="row"><span class="badge spam_update">Spam update</span>
+      <time datetime="2026-09-24">24 Sept 2026</time>
+      <span class="status confirmed">confirmed</span></div>
+    <h2><a href="/change/google-september-2026-spam-update.html">Google's September 2026 spam update finished rolling out on October 8</a></h2>
+    <span class="who">For Site owners · Marketers</span>
+    <p class="snip">Sites using scaled content, expired-domain abuse, site reputation abuse (paid posts on an otherwise unrelated section), cloaking, or thin affiliate pages.</p>
+  </li>
+  <li data-type="spam_update" data-aud="site_owners marketers">
+    <div class="row"><span class="badge spam_update">Spam update</span>
+      <time datetime="2026-08-18">18 Aug 2026</time>
+      <span class="status confirmed">confirmed</span></div>
+    <h2><a href="/change/google-august-2026-spam-update.html">Google's August 2026 spam update ran for three days and completed August 21</a></h2>
+    <span class="who">For Site owners · Marketers</span>
+    <p class="snip">Sites that added scaled or sponsored content in the months before August 2026.</p>
+  </li>
+  <li data-type="deprecation" data-aud="developers">
     <div class="row"><span class="badge deprecation">Deprecation</span>
       <time datetime="2026-07-21">21 Jul 2026</time>
       <span class="status confirmed">confirmed</span></div>
     <h2><a href="/change/gemini-temperature-top-p-top-k-deprecated.html">Gemini's latest models ignore temperature, top_p and top_k</a></h2>
-    <p class="snip">Google's Gemini API documentation states that for the latest models, temperature, top_p and top_k are deprecated and ignored.</p>
+    <span class="who">For Developers</span>
+    <p class="snip">Teams calling Gemini's newest models through the API and tuning sampling parameters. Nothing throws — the knobs just stop working.</p>
   </li>
-  <li data-type="deprecation">
+  <li data-type="deprecation" data-aud="developers">
     <div class="row"><span class="badge deprecation">Deprecation</span>
       <time datetime="2026-07-10">10 Jul 2026</time>
       <span class="status reported">reported</span></div>
     <h2><a href="/change/gemini-2-5-flash-discontinuation-pressure.html">Developers are pushing back on plans to discontinue Gemini 2.5 Flash</a></h2>
-    <p class="snip">A Google AI developer forum thread on July 10, 2026 collects developer requests not to discontinue Gemini 2.5 Flash, which many teams use because it is cheap and fast.</p>
+    <span class="who">For Developers</span>
+    <p class="snip">Teams running high-volume, low-cost workloads on Gemini 2.5 Flash.</p>
   </li>
-  <li data-type="policy_change">
+  <li data-type="policy_change" data-aud="teams founders">
     <div class="row"><span class="badge policy_change">Policy change</span>
       <time datetime="2026-05-22">22 May 2026</time>
       <span class="status reported">reported</span></div>
     <h2><a href="/change/microsoft-cancels-claude-code-licenses.html">Microsoft began cancelling internal Claude Code licenses</a></h2>
-    <p class="snip">The Verge reported on May 22, 2026 that Microsoft started cancelling Claude Code licenses internally.</p>
+    <span class="who">For Teams &amp; IT · Founders</span>
+    <p class="snip">Large orgs choosing an agent tool. Nothing in Claude Code itself changed — this is a procurement signal.</p>
   </li>
-  <li data-type="shutdown">
+  <li data-type="shutdown" data-aud="marketers teams">
     <div class="row"><span class="badge shutdown">Shutdown</span>
       <time datetime="2026-03-24">24 Mar 2026</time>
       <span class="status reported">reported</span></div>
     <h2><a href="/change/sora-discontinued-2026.html">OpenAI moved to discontinue Sora, its AI video product</a></h2>
-    <p class="snip">Reuters and Bloomberg reported in March 2026 that OpenAI was discontinuing Sora, the video generation product.</p>
+    <span class="who">For Marketers · Teams &amp; IT</span>
+    <p class="snip">Teams that built video pipelines on Sora, and anyone holding Sora credits.</p>
   </li>
 </ol>
 <script>
-const btns=document.querySelectorAll('.filters button');
-btns.forEach(b=>b.addEventListener('click',()=>{
-  btns.forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
-  const t=b.dataset.type;
+const st={type:'all',aud:'all'};
+function apply(){
   document.querySelectorAll('ol.feed li').forEach(li=>{
-    li.style.display=(t==='all'||li.dataset.type===t)?'':'none';
+    const t=st.type==='all'||li.dataset.type===st.type;
+    const a=st.aud==='all'||(li.dataset.aud||'').split(' ').includes(st.aud);
+    li.style.display=(t&&a)?'':'none';
   });
+}
+document.querySelectorAll('.filters button').forEach(b=>b.addEventListener('click',()=>{
+  st[b.dataset.kind]=b.dataset.value;
+  document.querySelectorAll('.filters button[data-kind="'+b.dataset.kind+'"]').forEach(x=>x.setAttribute('aria-pressed',String(x===b)));
+  apply();
 }));
 </script>
 

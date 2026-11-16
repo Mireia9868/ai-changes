@@ -18,6 +18,19 @@
       ]
     },
     {
+      "id": "https://changes.aigeolens.com/change/google-november-2026-core-update.html",
+      "url": "https://changes.aigeolens.com/change/google-november-2026-core-update.html",
+      "title": "Google's November 2026 core update is rolling out — global, all languages, up to two weeks",
+      "date_published": "2026-11-10T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "Google released the November 2026 core update on November 10 at 18:06 UTC. It applies globally and to all languages, and Google says the rollout may take up to two weeks to complete, which puts the expected end around November 24. Rankings can move repeatedly during the rollout before they settle.",
+      "tags": [
+        "algorithm_update",
+        "Google",
+        "Google Search"
+      ]
+    },
+    {
       "id": "https://changes.aigeolens.com/change/google-custom-search-api-shutdown.html",
       "url": "https://changes.aigeolens.com/change/google-custom-search-api-shutdown.html",
       "title": "Google Custom Search JSON API is being shut down — migration options for site search and RAG",
@@ -54,6 +67,32 @@
         "shutdown",
         "Mozilla",
         "Solo"
+      ]
+    },
+    {
+      "id": "https://changes.aigeolens.com/change/google-september-2026-spam-update.html",
+      "url": "https://changes.aigeolens.com/change/google-september-2026-spam-update.html",
+      "title": "Google's September 2026 spam update finished rolling out on October 8",
+      "date_published": "2026-09-24T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "Google began the September 2026 spam update on September 24, 2026, and marked the rollout complete as of October 8, 2026. Spam updates target behaviour that violates Google's spam policies rather than general ranking quality, so a site can lose visibility here without ever being a 'low quality' site in the core-update sense.",
+      "tags": [
+        "spam_update",
+        "Google",
+        "Google Search"
+      ]
+    },
+    {
+      "id": "https://changes.aigeolens.com/change/google-august-2026-spam-update.html",
+      "url": "https://changes.aigeolens.com/change/google-august-2026-spam-update.html",
+      "title": "Google's August 2026 spam update ran for three days and completed August 21",
+      "date_published": "2026-08-18T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "Google released the August 2026 spam update on August 18, 2026, and marked the rollout complete on August 21, 2026. It was a short rollout, which makes it easier to date a traffic drop against: a dip that starts inside that three-day window and does not recover is worth investigating.",
+      "tags": [
+        "spam_update",
+        "Google",
+        "Google Search"
       ]
     },
     {
