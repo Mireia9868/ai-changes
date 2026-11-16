@@ -1,0 +1,19 @@
+# AI Change Log
+
+> A dated log of AI tools that shut down, changed price, changed usage limits, deprecated a model or changed licensing policy. Each entry lists the vendor, the change type, the status (confirmed vs reported), the deadline if any, and the migration step.
+
+Last updated: 2026-11-16. Entries are re-checked against vendor documentation; the status field distinguishes confirmed changes from press reports.
+
+## Changes
+- [A banked Codex reset was activated for all paid users on November 12, 2026](https://changes.aigeolens.com/change/codex-banked-reset-nov-12-2026.html): confirmed, 2026-11-12
+- [Google Custom Search JSON API is being shut down — migration options for site search and RAG](https://changes.aigeolens.com/change/google-custom-search-api-shutdown.html): reported, 2026-10-30
+- [OpenAI doubled Codex and Work usage limits on Pro 100 and Pro 500, and cancelled the Pro 200 cut](https://changes.aigeolens.com/change/codex-pro-limits-doubled-oct-2026.html): confirmed, 2026-10-29
+- [Solo (Mozilla's AI website builder) is shutting down — sites deleted November 30, 2026](https://changes.aigeolens.com/change/solo-ai-website-builder-shutdown.html): confirmed, 2026-10-01
+- [Gemini's latest models ignore temperature, top_p and top_k](https://changes.aigeolens.com/change/gemini-temperature-top-p-top-k-deprecated.html): confirmed, 2026-07-21
+- [Developers are pushing back on plans to discontinue Gemini 2.5 Flash](https://changes.aigeolens.com/change/gemini-2-5-flash-discontinuation-pressure.html): reported, 2026-07-10
+- [Microsoft began cancelling internal Claude Code licenses](https://changes.aigeolens.com/change/microsoft-cancels-claude-code-licenses.html): reported, 2026-05-22
+- [OpenAI moved to discontinue Sora, its AI video product](https://changes.aigeolens.com/change/sora-discontinued-2026.html): reported, 2026-03-24
+
+## Machine-readable
+- [JSON feed](https://changes.aigeolens.com/feed.json)
+- [Sitemap](https://changes.aigeolens.com/sitemap.xml)

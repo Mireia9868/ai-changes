@@ -1,0 +1,112 @@
+{
+  "version": "https://jsonfeed.org/version/1.1",
+  "title": "AI Change Log",
+  "home_page_url": "https://changes.aigeolens.com",
+  "feed_url": "https://changes.aigeolens.com/feed.json",
+  "items": [
+    {
+      "id": "https://changes.aigeolens.com/change/codex-banked-reset-nov-12-2026.html",
+      "url": "https://changes.aigeolens.com/change/codex-banked-reset-nov-12-2026.html",
+      "title": "A banked Codex reset was activated for all paid users on November 12, 2026",
+      "date_published": "2026-11-12T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "OpenAI activated a banked reset for Codex at 21:59 UTC on November 12, 2026, applying to paid Codex and ChatGPT Work users. Banked resets refresh both the 5-hour and weekly windows and move the weekly reset date; each grant shows its own expiry, and recent grants ran about 30 days.",
+      "tags": [
+        "limit_change",
+        "OpenAI",
+        "Codex"
+      ]
+    },
+    {
+      "id": "https://changes.aigeolens.com/change/google-custom-search-api-shutdown.html",
+      "url": "https://changes.aigeolens.com/change/google-custom-search-api-shutdown.html",
+      "title": "Google Custom Search JSON API is being shut down — migration options for site search and RAG",
+      "date_published": "2026-10-30T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "Reports on October 30, 2026 say Google is retiring the Custom Search JSON API, the endpoint many products used for cheap programmatic web search. Teams using it for site search, RAG retrieval or content monitoring need a replacement. We have not yet confirmed the exact shutdown date on Google's own documentation.",
+      "tags": [
+        "shutdown",
+        "Google",
+        "Google Custom Search JSON API"
+      ]
+    },
+    {
+      "id": "https://changes.aigeolens.com/change/codex-pro-limits-doubled-oct-2026.html",
+      "url": "https://changes.aigeolens.com/change/codex-pro-limits-doubled-oct-2026.html",
+      "title": "OpenAI doubled Codex and Work usage limits on Pro 100 and Pro 500, and cancelled the Pro 200 cut",
+      "date_published": "2026-10-29T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "On October 29, 2026 OpenAI doubled all usage limits for Pro 100, Pro 200 and Pro 500 tiers plus Business Premium for Codex and ChatGPT Work. The previously announced Pro 200 reduction was cancelled, and existing subscribers get the higher allowance without waiting for renewal. Plus is unchanged.",
+      "tags": [
+        "limit_change",
+        "OpenAI",
+        "Codex"
+      ]
+    },
+    {
+      "id": "https://changes.aigeolens.com/change/solo-ai-website-builder-shutdown.html",
+      "url": "https://changes.aigeolens.com/change/solo-ai-website-builder-shutdown.html",
+      "title": "Solo (Mozilla's AI website builder) is shutting down — sites deleted November 30, 2026",
+      "date_published": "2026-10-01T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "Mozilla announced on October 1, 2026 that Solo is closing. Every Solo website and all account data will be deleted on November 30, 2026, with no recovery after that date. Solo Pro and Grow subscriptions get a prorated refund back to the original payment method automatically.",
+      "tags": [
+        "shutdown",
+        "Mozilla",
+        "Solo"
+      ]
+    },
+    {
+      "id": "https://changes.aigeolens.com/change/gemini-temperature-top-p-top-k-deprecated.html",
+      "url": "https://changes.aigeolens.com/change/gemini-temperature-top-p-top-k-deprecated.html",
+      "title": "Gemini's latest models ignore temperature, top_p and top_k",
+      "date_published": "2026-07-21T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "Google's Gemini API documentation states that for the latest models, temperature, top_p and top_k are deprecated and ignored. Code that relies on these parameters to shape output diversity will silently stop having an effect rather than erroring.",
+      "tags": [
+        "deprecation",
+        "Google",
+        "Gemini API"
+      ]
+    },
+    {
+      "id": "https://changes.aigeolens.com/change/gemini-2-5-flash-discontinuation-pressure.html",
+      "url": "https://changes.aigeolens.com/change/gemini-2-5-flash-discontinuation-pressure.html",
+      "title": "Developers are pushing back on plans to discontinue Gemini 2.5 Flash",
+      "date_published": "2026-07-10T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "A Google AI developer forum thread on July 10, 2026 collects developer requests not to discontinue Gemini 2.5 Flash, which many teams use because it is cheap and fast. A community thread is a signal that a retirement is being discussed — it is not a retirement announcement.",
+      "tags": [
+        "deprecation",
+        "Google",
+        "Gemini 2.5 Flash"
+      ]
+    },
+    {
+      "id": "https://changes.aigeolens.com/change/microsoft-cancels-claude-code-licenses.html",
+      "url": "https://changes.aigeolens.com/change/microsoft-cancels-claude-code-licenses.html",
+      "title": "Microsoft began cancelling internal Claude Code licenses",
+      "date_published": "2026-05-22T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "The Verge reported on May 22, 2026 that Microsoft started cancelling Claude Code licenses internally. This is a purchasing decision inside one large company, not a change to Anthropic's product — but it is the kind of signal teams use when deciding whether an agent tool is safe to standardise on.",
+      "tags": [
+        "policy_change",
+        "Microsoft (internal licensing)",
+        "Claude Code"
+      ]
+    },
+    {
+      "id": "https://changes.aigeolens.com/change/sora-discontinued-2026.html",
+      "url": "https://changes.aigeolens.com/change/sora-discontinued-2026.html",
+      "title": "OpenAI moved to discontinue Sora, its AI video product",
+      "date_published": "2026-03-24T00:00:00Z",
+      "date_modified": "2026-11-16T00:00:00Z",
+      "summary": "Reuters and Bloomberg reported in March 2026 that OpenAI was discontinuing Sora, the video generation product. We have not re-verified the current status of the consumer app or the API on OpenAI's own pages, so treat this as reported rather than confirmed.",
+      "tags": [
+        "shutdown",
+        "OpenAI",
+        "Sora"
+      ]
+    }
+  ]
+}
